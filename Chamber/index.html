@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Creating Rexburg Chamber of Commerce site: home page">
+    <link rel="shortcut icon" href="images/rcc.ico">
+    <link rel="stylesheet" href="css/small.css">
+    <link rel="stylesheet" href="css/medium.css">
+    <link rel="stylesheet" href="css/large.css">
+    <title>Home</title>
+</head>
+<body>
+    <header>
+        <a href="index.html" id="logo"><img src="images/logo ttt.png" alt="the promise land Chamber Logo"></a>
+        <nav>
+            <ul class="navigation">
+                <li><a class="ham" href="#">&#9776;Menu</a></li>
+                <li><a class="active" href="index.html">Home</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="hero">
+            <img src="images/uyo.jpg" alt="Uyo">
+            <div class="weather-info">
+                <h2>Weather Summary</h2>
+                <hr>
+                <p><strong>Currently: </strong><span id="desc"></span></p>
+                <p><strong>Temperature: </strong><span id="temp"></span> °C</p>
+                <p><strong>Humidity: </strong><span id="hum"></span>%</p>
+            </div>
+        </div>
+        <div class="advertisement">
+            <div class="ad1">
+                <img src="images/cenima.jpg" alt="ibom cinema">
+                <p>20% off For University of Uyo Students</p>
+                <h4>No.-- IBB Road</h4>
+            </div>
+            <div class="ad2">
+                <h2>Small's Finger</h2>
+                <div class="ad2-grid">
+                    <img src="images/small.jpeg" alt="Small's Finger-Fast-Food">
+                    <p>Stop by for your favorit local and international dishes, with a special breakfast menu </p>
+                </div>
+            </div>
+            <div class="ad3">
+                <h2>De Comfort Zone </h2>
+                <img src="images/chilax.jpg" alt="Bountiful Place">
+                <p id="p1">Just for 10k you can come relax after a stressful Day, Week or Month</p>
+                <p id="p2">20% Discount on Pretty Sweetdelicious pastries!</p>
+            </div>
+        </div>
+        <div class="events">
+            <div class="townEvents">
+                <h2>Upcomimg Events</h2>
+                <ul>
+                    <li>May 26th: Sun Set And The Movies @ No.95 Udomana </li>
+                    <li>May 28th: Cake Mania @ Emerald Event Center</li>
+                    <li>June: A Trip Out Of Uyo</li>
+                    <li>Every Friday: Happy Hour @ Water Fountain Uyo </li>
+                </ul>
+            </div>
+            <div class="weatherEvents">
+                <h2>Future Temperature</h2>
+                <div class="forecast-box">
+                    <div class="box1">
+                        <span id="day1">day1</span>
+                        <p><span id="temp1">temp1</span>°C</p>
+                        <img id="weatherimg1" src="" alt="">
+                    </div>
+                    <div class="box2">
+                        <span id="day2">day2</span>
+                        <p><span id="temp2">temp2</span>°C</p>
+                        <img id="weatherimg2" src="" alt="">
+                    </div>
+                    <div class="box3">
+                        <span id="day3">day1</span>
+                        <p><span id="temp3">temp1</span>°C</p>
+                        <img id="weatherimg3" src="" alt="">
+                    </div>
+                </div>    
+            </div>
+        </div>
+        <div class="about">
+            <h1>About Us</h1>
+            <div class="about-grid">
+                <p>This site to support buisnesses here in the
+                    Uyo AkwaIbom State. We promote all kinds of business within Uyo, AkwaIbom state,
+                    from amusment parks to resturants, sporting activities, cinemas for movies, malls,schools and 
+                    local shops. </p>
+                <img src="images/FB_IMG_1662629295435.jpg" alt=" TPLCC workers">
+            </div>
+            <button type="button" onclick="location.href='join.html'">Join</button>
+        </div>
+        <div class="contact">
+            <h1>Contact Us</h1>
+            <div class="location">
+                <h2>Location</h2>
+                <p>No. 21 Nsentip Street Uyo</p>
+            </div>
+            <div class="icons">
+                <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer"><img src="images/facebook (1).png" alt="facebook icon"></a>
+                <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer"><img src="images/linkedin (1).png" alt="linkedin icon"></a>
+                <a href="#" target="_blank" rel="noopener noreferrer"><img src="images/email (1).png" alt="email icon"></a>
+            </div>
+            <div class="officeHour">
+                <h2>Office Hour</h2>
+                <p>From 8 a.m. to 4 p.m. Mon - Fri</p>
+                <p>+2348111665753</p>
+            </div>
+        </div>
+        
+    </main>
+
+    <footer>
+        <p>© <span class="year"></span> | John Asada | Uyo | <a href="resource.html" target="_blank">Services</a></p>
+                <div class="date"></div>
+    </footer>
+    <script src="js/script.js"></script>
+    <script src="js/home.js"></script>
+</body>
+</html>
