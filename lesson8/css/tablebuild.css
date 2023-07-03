@@ -1,45 +1,66 @@
-@import url("https://fonts.googleapis.com/css2?family=Ubuntu&display=swap");
-main {
-  display: flex;
-  justify-content: center;
-  font-family: Ubuntu, sans-serif;
-}
-table {
-  box-shadow: 10px 10px 10px #090d0f;
-}
-table,
-th,
-td {
-  border: 1px solid rgb(175, 175, 175);
-  border-collapse: collapse;
+.head{
+  font-family: 'Roboto Condensed', sans-serif;
+  padding: 0.5%;
+  font-size: 25px;
   text-align: center;
-  padding: 8px;
+  margin: 15px;
+  color:#90b748;
 }
-thead,
-tfoot {
-  background-color: #1e16b1;
+caption{
+  padding: 10px;
+  caption-side: bottom;
+  color: black;
+  font-size: .85rem;
 }
-thead {
-  font-size: 1.5rem;
+table{
+  margin: 50px auto;
+  width: 50%;
+  border: thin solid #90b748;
+  border-collapse: collapse;
 }
-tbody {
-  background-color: #b3b009;
+
+tr:first-child th {
+  background-color: black;
+  border: 1px solid black;
+  color: white; 
 }
-tbody tr:first-child {
-  color: rgb(235, 241, 241);
-  background-color: #1017e4;
-  font-weight: bold;
+tbody tr:nth-child(even){
+  background-color: rgb(150, 150, 150);
 }
-tbody tr:nth-child(even) {
-  background-color: #1f8b67;
+tbody tr:nth-child(odd){
+  background-color: rgb(255, 255, 255);
 }
-tbody tr:nth-child(5) td:nth-child(3) {
-  color: white;
-  background-color: #0a06da;
+
+.pure{
+  background-color: black;
 }
-#bf {
-  font-style: italic;
+
+th{
+  background-color: white;
 }
-tfoot {
-  font-size: 1.0rem;
+td{
+  text-align: center;
+}
+th, td{
+  padding: 17px 15px;
+  border: 1px solid black;
+}
+
+@media only screen and (min-width:  35em) {
+  .head{
+      margin: 25px;
+      font-size: 28px;
+  }
+  table{
+      margin: 100px auto;
+      width: 50%;
+  }
+  caption{
+      font-size: 1rem;
+  }
+  th, td{
+      font-size: 20px;
+  }
+  
+  
 }
