@@ -314,6 +314,72 @@ footer p {
   max-width: 20rem;
   background-color: #ffdee9;
 }
+.head{
+  font-family: 'Roboto Condensed', sans-serif;
+  padding: 0.5%;
+  font-size: 25px;
+  text-align: center;
+  margin: 15px;
+  color:#90b748;
+}
+caption{
+  padding: 10px;
+  caption-side: bottom;
+  color: black;
+  font-size: .85rem;
+}
+table{
+  margin: 50px auto;
+  width: 50%;
+  border: thin solid #90b748;
+  border-collapse: collapse;
+}
+
+tr:first-child th {
+  background-color: rgb(231, 135, 26);
+  border: 1px solid black;
+  color: rgb(234, 240, 242); 
+}
+tbody tr:nth-child(even){
+  background-color: rgb(150, 150, 150);
+}
+tbody tr:nth-child(odd){
+  background-color: rgb(48, 140, 163);
+}
+
+.pure{
+  background-color: black;
+}
+
+th{
+  background-color: white;
+}
+td{
+  text-align: center;
+}
+th, td{
+  padding: 17px 15px;
+  border: 1px solid black;
+}
+
+@media only screen and (min-width:  35em) {
+  .head{
+      margin: 25px;
+      font-size: 28px;
+  }
+  table{
+      margin: 30px auto;
+      width: 50%;
+  }
+  caption{
+      font-size: 1rem;
+  }
+  th, td{
+      font-size: 20px;
+  }
+  
+  
+}
 /*confirmation and thank you page*/
 .confirmmessage {
   text-align: center;
