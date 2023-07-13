@@ -1,37 +1,64 @@
-const requestURL = 'https://brotherblazzard.github.io/canvas-content/latter-day-prophets.json';
+const url = 'https://brotherblazzard.github.io/canvas-content/latter-day-prophets.json';
 
-fetch(requestURL)
-  .then(function (response) {
-    return response.json();
-  })
-  .then(function (jsonObject) {
-    console.table(jsonObject);  // temporary checking for valid response and data parsing
+async function getProphetData() {
+    const response = await fetch(url);
+    const data = await response.json();
+    //console.table(data.prophets); 
+    displayProphets(data.prophets);
+  }
+  
+const displayProphets = (prophets) => {
+    const cards = document.querySelector('div.cards');
 
-    const prophets = jsonObject['prophets'];
-
-    for (let i = 0; i < prophets.length; i++ ) {
-
+    prophets.forEach((prophet) => {
         let card = document.createElement('section');
         let h2 = document.createElement('h2');
-        let p1 = document.createElement('p');
-        let p2 = document.createElement('p');
-        let image = document.createElement('img');
+        let portrait = document.createElement('img');
+        let birth = document.createElement('p');
+        let place = document.createElement('p');
+        let death = document.createElement('p');
+        let age = document.createElement('p');
 
-        h2.textContent = prophets[i].name + ' ' + prophets[i].lastname;
-        p1.textContent = "Date of Birth: " + prophets[i].birthdate;
-        p2.textContent = "Place of Birth: " + prophets[i].birthplace;
-        image.setAttribute('src', prophets[i].imageurl);
-        image.setAttribute('alt', prophets[i].name + ' ' + prophets[i].lastname + ' - ' + prophets[i].order);
-        p1.setAttribute('id', 'p1');
-        p2.setAttribute('id', 'p2');
-        
+        let deathAge;
+
+        if(prophet.death != null){
+            let deathArray = prophet.death.split(" ");
+            let deathYear = deathArray[2];
+            let birthArray = prophet.birthdate.split(" ");
+            let birthYear = birthArray[2];
+
+            deathAge = deathYear - birthYear;
+        } else {
+            let birthArray = prophet.birthdate.split(" ");
+            let birthYear = birthArray[2];
+            deathAge = 2023 - birthYear;
+        }
+
+        h2.textContent = `${prophet.name} ${prophet.lastname}`
+
+        portrait.setAttribute('src', prophet.imageurl);
+        portrait.setAttribute('alt', `Portait of ${prophet.name} ${prophet.lastname}`);
+        portrait.setAttribute('loading', 'lazy');
+        portrait.setAttribute('width', '340');
+        portrait.setAttribute('height', '440');
+
+        birth.textContent = `Birth Date: ${prophet.birthdate}`
+
+        place.textContent = `Birth Place: ${prophet.birthplace}`
+
+        death.textContent = `Death Date: ${prophet.death}`
+
+        age.textContent = `Age: ${deathAge}`
+
         card.appendChild(h2);
-        card.appendChild(p1);
-        card.appendChild(p2);
-        card.appendChild(image);
-        
-        document.querySelector('div.cards').appendChild(card);
-    }
-  });
+        card.appendChild(portrait);
+        card.append(birth);
+        card.append(place);
+        card.append(death);
+        card.append(age);
+    
+        cards.appendChild(card);
+    });
+}
 
-  
+getProphetData();
